@@ -110,44 +110,99 @@
   pointer-events: none;
   z-index: 2;
 }
-</style></head>
+</style>
+<style>
+.curtain-overlay {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  pointer-events: none;
+  z-index: 2;
+}
+</style><style id="custom-alert-style">
+        .custom-alert-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 99997;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .custom-alert-backdrop.show {
+            opacity: 1;
+        }
+
+        .custom-alert-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -60%) scale(0.95);
+            opacity: 0;
+            z-index: 99998;
+            width: 100%;
+            max-width: 420px;
+            font-family: 'Quicksand', sans-serif;
+            transition: transform 0.35s ease, opacity 0.35s ease;
+            pointer-events: none;
+        }
+
+        .custom-alert-popup.show {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .custom-alert-content {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+            text-align: center;
+            padding: 30px 26px;
+        }
+
+        .custom-alert-message {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 22px;
+        }
+
+        .custom-alert-popup.success .custom-alert-message {
+            color: #28a745;
+        }
+
+        .custom-alert-popup.error .custom-alert-message {
+            color: #dc3545;
+        }
+
+        .custom-alert-ok-btn {
+            background: linear-gradient(135deg, #e39a4e, #fb1b1b);
+            color: #fff;
+            border: none;
+            padding: 10px 36px;
+            border-radius: 230px;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .custom-alert-ok-btn:hover {
+            opacity: 0.9;
+        }
+
+        body.custom-alert-open {
+            overflow: hidden;
+        }
+    </style></head>
 <body class="theme-1" style="">
 <div class="" id="wrapper" style="pointer-events: auto;">
 <div class="" data-src="header.html" id="header"></div>
 <div class="" id="mainPageContent">
-<section class="section-wrapper home-22 effect pop-in animate" id="section-zw5magzaswp">
-<div class="container-fluid home-22-container">
-<div class="row">
-<!-- Left Side -->
-<div class="col-md-6 col-sm-12 home-22-left text-center">
-<p class="home-22-subtitle">UPCOMING EVENTS</p>
-<h2 class="home-22-title">Open Houses for<br/>the 2024/2025 School Year</h2>
-<p class="home-22-date">June 15, 2024 at 11:00 AM</p>
-<div class="home-22-timer-wrapper">
-<div class="home-22-timer-box">
-<span class="home-22-timer-number">0</span>
-<span class="home-22-timer-label">HOURS</span>
-</div>
-<div class="home-22-timer-box">
-<span class="home-22-timer-number">0</span>
-<span class="home-22-timer-label">MIN</span>
-</div>
-<div class="home-22-timer-box">
-<span class="home-22-timer-number">0</span>
-<span class="home-22-timer-label">SEC</span>
-</div>
-</div>
-<button class="home-22-btn">Join Now!</button>
-</div>
-<!-- Right Side -->
-<div class="col-md-6 col-sm-12 home-22-right">
-<div class="home-22-img-wrapper">
-<img alt="Kids Image" class="img-responsive home-22-img" src="assets/images/home-22-1.png"/>
-</div>
-</div>
-</div>
-</div>
-</section><div class="section-wrapper home-3 effect slide-left" id="section-1fl8efn2ucf">
+<div class="section-wrapper home-3 effect slide-left" id="section-1fl8efn2ucf">
 <article class="container">
 <div class="row home-3-content align-items-center">
 <!-- Gray background layer -->
@@ -170,7 +225,39 @@
 </div>
 </div>
 </article>
-</div><section class="section-wrapper home-35 updateImg" data-original-src="assets/images/home-35-1.jpg" id="section-avc822gumya" style='background: url("assets/images/home-35-1.jpg") center center no-repeat;'>
+</div><section class="section-wrapper home-19-section-wrapper" id="section-wbp92vk9r59">
+<div class="container">
+<div class="row">
+<div class="col-xs-12">
+<h2 class="home-19-heading">Editor's pick</h2>
+<p class="home-19-subheading">Discover the most outstanding articles in all topics of life.</p>
+</div>
+</div>
+<div class="row home-19-overlap-container">
+<div class="col-sm-12">
+<div class="home-19-image-box">
+<img alt="Books on beach" src="assets/images/home-19.1.jpg"/>
+</div>
+<div class="home-19-card">
+<span class="home-19-tag">Industrial</span>
+<h3 class="home-19-title">Lenovo’s smarter devices stoke professional passions</h3>
+<div class="home-19-author">
+<img alt="Author" src="https://randomuser.me/api/portraits/men/32.jpg"/>
+<div class="home-19-author-info">
+<strong>Foulcher Nathanil</strong><br/>
+<small>May 20, 2021</small>
+</div>
+</div>
+<div class="home-19-meta">
+<div><span class="glyphicon glyphicon-heart"></span> 34</div>
+<div><span class="glyphicon glyphicon-comment"></span> 110</div>
+<div><span class="glyphicon glyphicon-bookmark"></span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section class="section-wrapper home-35 updateImg" data-original-src="assets/images/home-35-1.jpg" id="section-avc822gumya" style='background: url("assets/images/home-35-1.jpg") center center no-repeat;'>
 <div class="container">
 <div class="row">
 <!-- Left Image Side -->
