@@ -142,11 +142,11 @@ $(document).on('hidden.bs.modal', '#customAlertModal', function () {
 
 
 
-    // Initialization
-    var wrapper = $('#wrapper').addClass('editableSection');
+    // // Initialization
+    // var wrapper = $('#wrapper').addClass('editableSection');
 
-    // Add top bar
-    var topBar = $('<div>', { id: 'top-bar', class: 'top-bar' }).insertBefore(wrapper);
+    // // Add top bar
+    // var topBar = $('<div>', { id: 'top-bar', class: 'top-bar' }).insertBefore(wrapper);
 
     // Add image upload form
     $('<form method="post" id="imgForm" enctype="multipart/form-data">').appendTo('body');
